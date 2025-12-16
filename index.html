@@ -2,152 +2,33 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Chapter 1 — L & Leona 💜</title>
+<title>Love Letter 💜</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-
 <style>
-:root{
-  --pink:#ff8fab;
-  --purple:#9b5de5;
-  --red:#ff4d6d;
-}
-
-*{margin:0;padding:0;box-sizing:border-box;}
-
 body{
-  font-family:'Montserrat',sans-serif;
-  background:linear-gradient(180deg,var(--purple),var(--pink),var(--red));
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(180deg,#9b5de5,#ff8fab,#ff4d6d);
   color:white;
-  overflow-x:hidden;
-}
-
-/* PASSWORD SCREEN */
-#lockScreen{
-  position:fixed;
-  inset:0;
-  background:linear-gradient(180deg,#000,#2b003a);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-}
-
-.lock-box{
-  text-align:center;
-  background:rgba(255,255,255,0.1);
-  padding:40px;
-  border-radius:20px;
-  backdrop-filter:blur(10px);
-}
-
-.lock-box h1{
-  font-family:'Playfair Display',serif;
-  margin-bottom:15px;
-}
-
-.lock-box input{
-  padding:12px;
-  border:none;
-  border-radius:10px;
-  outline:none;
-  width:220px;
   text-align:center;
 }
 
-.lock-box button{
-  margin-top:15px;
-  padding:10px 20px;
-  border:none;
-  border-radius:20px;
-  background:var(--pink);
-  color:white;
-  cursor:pointer;
-}
-
-/* INTRO */
-#intro{
-  position:fixed;
-  inset:0;
-  background:linear-gradient(180deg,#000,#3a005a);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  z-index:999;
-  text-align:center;
-}
-
-.name{
-  font-family:'Playfair Display',serif;
-  font-size:3rem;
-  opacity:0;
-  animation:reveal 3s forwards;
-}
-
-@keyframes reveal{
-  0%{opacity:0;letter-spacing:1em;}
-  100%{opacity:1;letter-spacing:0.15em;}
-}
-
-.fade-out{
-  animation:fadeOut 2s forwards;
-}
-
-@keyframes fadeOut{
-  to{opacity:0;visibility:hidden;}
-}
-
-/* SECTIONS */
 section{
   min-height:100vh;
-  padding:60px 20px;
   display:flex;
+  flex-direction:column;
   justify-content:center;
   align-items:center;
-  text-align:center;
+  padding:30px;
 }
 
-.fade{
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 1.2s ease;
-}
-
-.fade.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-h1,h2{
-  font-family:'Playfair Display',serif;
-}
-
-.story{
-  max-width:900px;
-  line-height:2;
-  white-space:pre-wrap;
-}
-
-/* KITTY */
-.kitty{
-  width:80%;
+img{
   max-width:260px;
-  animation:float 4s ease-in-out infinite, glow 3s infinite;
+  width:80%;
+  margin:20px 0;
 }
 
-@keyframes float{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-12px);}
-}
-
-@keyframes glow{
-  0%,100%{filter:drop-shadow(0 0 15px rgba(255,255,255,0.3));}
-  50%{filter:drop-shadow(0 0 30px rgba(255,200,255,0.7));}
-}
-
-/* MUSIC BUTTON */
 #musicBtn{
   position:fixed;
   bottom:20px;
@@ -156,135 +37,53 @@ h1,h2{
   height:60px;
   border-radius:50%;
   border:none;
+  font-size:22px;
   background:rgba(255,255,255,0.3);
   color:white;
-  font-size:22px;
   cursor:pointer;
-  z-index:1000;
-}
-
-/* HEARTS */
-.particle{
-  position:fixed;
-  bottom:-20px;
-  animation:floatUp linear infinite;
-  pointer-events:none;
-}
-
-@keyframes floatUp{
-  from{transform:translateY(0);opacity:0;}
-  10%{opacity:1;}
-  to{transform:translateY(-120vh);opacity:0;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- PASSWORD -->
-<div id="lockScreen">
-  <div class="lock-box">
-    <h1>💜 Private 💜</h1>
-    <input type="password" id="pass" placeholder="Password">
-    <br>
-    <button onclick="unlock()">Enter</button>
-  </div>
-</div>
-
-<!-- INTRO -->
-<div id="intro" style="display:none">
-  <div class="name">LEONA 💜</div>
-</div>
-
-<!-- CONTENT -->
-<section class="fade">
-  <h1>Chapter 1 — Love In Sight 💜</h1>
+<section>
+  <h1>Chapter 1 💜</h1>
+  <p>This page is loading correctly.</p>
 </section>
 
-<section class="fade">
-  <img src="./kitty-love.png" class="kitty">
+<section>
+  <img src="kitty-love.png" alt="Kitty">
+  <img src="kitty-close.png" alt="Kitty">
 </section>
 
-<section class="fade">
-<div class="story">
-Heh....... (hehe, shy laugh)
-This is where everything started...
-Two nights.
-One connection.
-And a feeling that didn’t want to leave 💜
-</div>
+<section>
+  <p>
+    If you can read this, text works.<br>
+    If you see images, images work.<br>
+    If music plays, everything is fixed 💜
+  </p>
 </section>
 
-<audio id="bgMusic" loop>
-  <source src="./music.mp3" type="audio/mpeg">
+<audio id="music">
+  <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 <button id="musicBtn">▶️</button>
 
 <script>
-/* PASSWORD */
-function unlock(){
-  if(document.getElementById("pass").value==="leona"){
-    document.getElementById("lockScreen").style.display="none";
-    document.getElementById("intro").style.display="flex";
-    setTimeout(()=>{
-      document.getElementById("intro").classList.add("fade-out");
-    },3000);
-  }
-}
+const music = document.getElementById("music");
+const btn = document.getElementById("musicBtn");
 
-/* MUSIC */
-const music=document.getElementById("bgMusic");
-const btn=document.getElementById("musicBtn");
-let playing=false;
-
-function fadeIn(){
-  music.volume=0;
-  let v=0;
-  const f=setInterval(()=>{
-    v+=0.02;
-    music.volume=v;
-    if(v>=0.4)clearInterval(f);
-  },150);
-}
-
-function startMusic(){
-  if(!playing){
+btn.onclick = () => {
+  if (music.paused) {
     music.play();
-    fadeIn();
-    btn.textContent="⏸️";
-    playing=true;
-  }
-}
-
-btn.onclick=()=>{
-  if(playing){
+    btn.textContent = "⏸️";
+  } else {
     music.pause();
-    btn.textContent="▶️";
-    playing=false;
-  }else startMusic();
-}
-
-document.addEventListener("click",startMusic,{once:true});
-
-/* SCROLL FADE */
-const obs=new IntersectionObserver(e=>{
-  e.forEach(x=>x.isIntersecting&&x.target.classList.add("show"))
-},{threshold:.2});
-document.querySelectorAll(".fade").forEach(s=>obs.observe(s));
-
-/* HEARTS */
-const hearts=["💜","💖","❤️","🎀"];
-setInterval(()=>{
-  const h=document.createElement("div");
-  h.className="particle";
-  h.innerText=hearts[Math.floor(Math.random()*hearts.length)];
-  h.style.left=Math.random()*100+"vw";
-  h.style.fontSize=(16+Math.random()*24)+"px";
-  h.style.animationDuration=(6+Math.random()*6)+"s";
-  document.body.appendChild(h);
-  setTimeout(()=>h.remove(),12000);
-},350);
+    btn.textContent = "▶️";
+  }
+};
 </script>
 
 </body>
